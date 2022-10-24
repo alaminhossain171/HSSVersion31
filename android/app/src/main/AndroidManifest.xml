@@ -1,7 +1,51 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="com.hellosuperstars">
 
+
+<!-- react native audio recoder player -->
+
+
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+<!-- react native audio recoder player -->
+
+
+
+
+
+<!-- image picker  -->
+ <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<!-- image picker  -->
     <uses-permission android:name="android.permission.INTERNET" />
+
+<!-- push nofification  -->
+<uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+<!-- push nofification  -->
+
+    <!-- video sdk  -->
+    <!-- Give all the required permissions to app -->
+   
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Needed to communicate with already-paired Bluetooth devices. (Legacy up to Android 11) -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" />
+
+    <!-- Needed to communicate with already-paired Bluetooth devices. (Android 12 upwards)-->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    
+        <!-- video sdk  -->
 
     <application
       android:name=".MainApplication"
@@ -22,5 +66,54 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
       </activity>
+
+<!-- video sdk  -->
+<meta-data
+      android:name="live.videosdk.rnfgservice.notification_channel_name"
+      android:value="Meeting Notification"
+     />
+    <meta-data
+    android:name="live.videosdk.rnfgservice.notification_channel_description"
+    android:value="Whenever meeting started notification will appear."
+    />
+    <meta-data
+    android:name="live.videosdk.rnfgservice.notification_color"
+    android:resource="@color/red"
+    />
+    <service android:name="live.videosdk.rnfgservice.ForegroundService" android:foregroundServiceType="mediaProjection"></service>
+    <service android:name="live.videosdk.rnfgservice.ForegroundServiceTask"></service>
+<!-- video sdk  -->
+
+
+<!-- push nofification  -->
+ 
+        <meta-data  android:name="com.dieam.reactnativepushnotification.notification_foreground"
+                    android:value="false"/>
+      
+        <meta-data  android:name="com.dieam.reactnativepushnotification.notification_color"
+                    android:resource="@color/red"/>
+
+        <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationActions" />
+        <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationPublisher" />
+        <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationBootEventReceiver"   android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+<!-- push nofification  -->
+
+
+
+
     </application>
 </manifest>
