@@ -6114,6 +6114,11 @@ react-native-pure-chart@0.0.24:
     lodash "^4.17.4"
     prop-types "^15.6.0"
 
+react-native-push-notification@^8.1.1:
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/react-native-push-notification/-/react-native-push-notification-8.1.1.tgz#a41d20c70ea5a7709417e96261b225461f8dc73a"
+  integrity sha512-XpBtG/w+a6WXTxu6l1dNYyTiHnbgnvjoc3KxPTxYkaIABRmvuJZkFxqruyGvfCw7ELAlZEAJO+dthdTabCe1XA==
+
 react-native-render-html@6.3.4:
   version "6.3.4"
   resolved "https://registry.npmjs.org/react-native-render-html/-/react-native-render-html-6.3.4.tgz"
@@ -6211,7 +6216,7 @@ react-native-swiper-flatlist@3.0.16:
 
 react-native-vector-icons@^9.2.0:
   version "9.2.0"
-  resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-9.2.0.tgz#3c0c82e95defd274d56363cbe8fead8d53167ebd"
+  resolved "https://registry.npmjs.org/react-native-vector-icons/-/react-native-vector-icons-9.2.0.tgz"
   integrity sha512-wKYLaFuQST/chH3AJRjmOLoLy3JEs1JR6zMNgTaemFpNoXs0ztRnTxcxFD9xhX7cJe1/zoN5BpQYe7kL0m5yyA==
   dependencies:
     prop-types "^15.7.2"
@@ -6219,7 +6224,7 @@ react-native-vector-icons@^9.2.0:
 
 react-native-video-player@^0.14.0:
   version "0.14.0"
-  resolved "https://registry.yarnpkg.com/react-native-video-player/-/react-native-video-player-0.14.0.tgz#7156496191065689c0d2e34dcde9ac903aee583f"
+  resolved "https://registry.npmjs.org/react-native-video-player/-/react-native-video-player-0.14.0.tgz"
   integrity sha512-lgdqq9h3Mi2poRII3sCE9RgrZIA140bWd83NEzyZp3andKaUiXKYSFcWu+BoySn2Y24dCrDFnhVEkvPq6sTndg==
   dependencies:
     deprecated-react-native-prop-types "^2.3.0"
