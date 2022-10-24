@@ -2,8 +2,20 @@
   package="com.hellosuperstars">
 
 
+<!-- react native audio recoder player -->
 
 
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+<!-- react native audio recoder player -->
+
+
+
+
+
+<!-- image picker  -->
+ <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<!-- image picker  -->
     <uses-permission android:name="android.permission.INTERNET" />
 
 <!-- push nofification  -->

@@ -1,14 +1,27 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useState, useEffect, useMemo } from 'react';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Routes from './src/Navigation/Routes';
+import axios from 'axios';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import Greetings from './src/Screen/Greetings/Greetings';
+import { Provider as PaperProvider } from 'react-native-paper';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-const App = () => {
+
+const Stack = createNativeStackNavigator();
+
+function App() {
   return (
-    <View>
-      <Text>App</Text>
-    </View>
-  )
+
+    <PaperProvider>
+
+
+      <Routes />
+
+    </PaperProvider>
+
+
+  );
 }
 
-export default App
-
-const styles = StyleSheet.create({})
+export default App;
